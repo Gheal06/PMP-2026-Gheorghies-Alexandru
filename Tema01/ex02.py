@@ -8,7 +8,7 @@ def simulate_game(p: float=0.5) -> (int, float):
         runs, money_delta = simulate_game()
         return (runs+1, money_delta-0.5)
     else: # stema
-        return (1, np.random.randint(0,7)-3)
+        return (1, np.random.randint(1,7)-3)
 
 print(simulate_game())
 # c)
