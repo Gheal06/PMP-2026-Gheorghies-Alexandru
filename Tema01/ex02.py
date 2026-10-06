@@ -3,13 +3,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 def simulate_game(p: float=0.5) -> (int, float):
-    coin = np.random.rand()>=p
-    if coin: # cap/ban
-        runs, money_delta = simulate_game()
-        return (runs+1, money_delta-0.5)
-    else: # stema
-        return (1, np.random.randint(1,7)-3)
-
+    runs = 1
+    money_delta = np.random.randint(1,7)-3
+    while np.random.rand()>=p:
+        runs += 1
+        money_delta -= 0.5
+    return (runs, money_delta)
 print(simulate_game())
 # c)
 

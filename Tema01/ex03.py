@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import arviz as az
 import math
-print(az.__version__)
 # de ce probabilitatile la frizeri sunt asa:
 # presupunand ca frizerii sunt ocupati la fel de mult timp T,
 # timpul expected de a termina un client este 1/lambda
